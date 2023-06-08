@@ -1,0 +1,51 @@
+// Defining a function
+@mixin flexCenter(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.nav-bar{
+    @include flexCenter();
+    height:auto;
+    width: 100%;
+    ul{
+        @include flexCenter();
+     
+    li{
+        position: relative;
+        display: inline-block;
+        list-style: none;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 150px;
+
+        a{
+            i{
+                svg{
+                    display: flex;
+                    width: 40px;
+                    margin-bottom: 10px;
+                    color: aliceblue;
+                    fill: none;
+                    transition:  transform 0.5s ease-out,fill ease,;
+                    &:hover{
+                        transform: translateY(30%);
+                        fill: white;
+                    }
+                }
+            }
+        }
+
+    }
+                
+}
+}
+
+@media  screen and (max-width:600px){
+    .nav-bar{
+        display: none;
+    }
+}

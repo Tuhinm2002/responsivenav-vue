@@ -1,0 +1,40 @@
+#check{
+    display:none;
+}
+
+label #btn,label #cancel{
+    display: none;
+}
+
+
+@media screen and (max-width:600px) {
+    label #btn{
+    display: block;
+    width: 30px;
+    left: 30px;
+    color:aliceblue;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: all 0.4s ease;
+    }
+
+    #check:checked ~ label #cancel{
+        display: block;
+        width: 30px;
+        left: 30px;
+        color:aliceblue;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 111;
+        transition: all 0.4s ease;
+    }
+
+    #check:checked ~ label #btn{
+        display: none;
+    }
+
+}
